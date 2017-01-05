@@ -7,3 +7,8 @@
     - { role: common, task: set_locale, tags: [ubuntu_set_locale] }
     - { role: postgres, tags: [postgres_install] }
     - { role: imagemagick, tags: [imagemagick_install] }
+
+- hosts: ec2
+  become: true
+  roles:
+    - { role: ruby, tags: [ruby_install] }
