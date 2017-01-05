@@ -5,5 +5,8 @@ instance_region: ap-southeast-1
 instance_type: t2.nano
 instance_ami: ami-06963965
 
-ansible_ssh_private_key_file: ~/.ssh/shirtly-sg-key.pem
+ansible_ssh_private_key_file: ~/.ssh/{{ instance_name }}-key.pem
 ansible_user: ubuntu
+ansible_user_home_dir: /home/{{ ansible_user }}
+
+postgresql_password: "darthvader"

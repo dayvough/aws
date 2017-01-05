@@ -5,3 +5,5 @@
     - { role: common, task: add_ssh_key, tags: [ubuntu_add_ssh_key] }
     - { role: common, task: basic_apps, tags: [ubuntu_basic_apps] }
     - { role: common, task: set_locale, tags: [ubuntu_set_locale] }
+    - { role: postgres, tags: [postgres_install] }
+    - { role: imagemagick, tags: [imagemagick_install] }
