@@ -3,17 +3,16 @@
   connection: local
   gather_facts: no
   vars:
-    region: ap-southeast-1
-    keyname: shirtly-sg-key
+    keyname: "{{ instance_name }}-key"
   tasks:
-    - name: create keypair
+    - name: create key pair
       ec2_key:
-        region: "{{ region }}"
+        region: "{{ instance_region }}"
         name: "{{ keyname }}"
       register: mykey
 
     - debug: var=mykey
 
-    - name: create SSH key from keypair
+    - name: write to file
       copy: content="{{ mykey.key.private_key }}" dest="~/.ssh/{{ keyname }}.pem" mode=0600
       when: mykey.changed
