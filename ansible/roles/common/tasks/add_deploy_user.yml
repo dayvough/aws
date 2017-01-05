@@ -2,7 +2,8 @@
 - name: create the deploy user
   user:
     name: deploy
-    group: sudo
+    groups: admin, sudo
+    append: yes
     shell: /bin/bash
     ssh_key_bits: 4096
     ssh_key_file: .ssh/deploy_id_rsa
