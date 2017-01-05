@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    keyname: "{{ instance_name }}"
+  tasks:
+    - name: create keypair
+      ec2_key:
+        region: "{{ instance_region }}"
+        name: "{{ keyname }}"
+      register: mykey
+
+    - debug: var=mykey
+
+    - name: create SSH key from keypair
+      copy: content="{{ mykey.key.private_key }}" dest="~/.ssh/{{ keyname }}.pem" mode=0600
+      when: mykey.changed
