@@ -1,0 +1,5 @@
+---
+- hosts: local
+  become: true
+  roles:
+    - { role: common, task: add_deploy_user, tags: [ubuntu_add_deploy_user] }
