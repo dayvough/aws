@@ -1,0 +1,16 @@
+---
+- name: apt upgrade and update
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  with_items:
+    - git-core
+    - build-essential
+    - curl
+    - libcurl4-openssl-dev
+    - libv8-dev
+    - libpq-dev
+    # - nodejs
+    # - nginx
+    # - postgresql

@@ -2,4 +2,6 @@
 - hosts: ec2
   become: true
   roles:
-    - { role: common, task: add_deploy_user, tags: [ubuntu_add_deploy_user] }
+    # - { role: common, task: add_ssh_key, tags: [ubuntu_add_ssh_key] }
+    # - { role: common, task: basic_apps, tags: [ubuntu_basic_apps] }
+    - { role: common, task: set_locale, tags: [ubuntu_set_locale] }

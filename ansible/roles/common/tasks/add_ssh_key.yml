@@ -1,0 +1,8 @@
+---
+- name: create ssh key for ubuntu user
+  user:
+    name: ubuntu
+    shell: /bin/bash
+    generate_ssh_key: yes
+    ssh_key_bits: 4096
+    ssh_key_file: .ssh/deploy_id_rsa

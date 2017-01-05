@@ -1,3 +1,7 @@
 ---
-- include: "add_deploy_user.yml"
-  when: task == "add_deploy_user"
+- include: "add_ssh_key.yml"
+  when: task == "add_ssh_key"
+- include: "basic_apps.yml"
+  when: task == "basic_apps"
+- include: "set_locale.yml"
+  when: task == "set_locale"
