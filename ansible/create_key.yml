@@ -3,11 +3,12 @@
   connection: local
   gather_facts: no
   vars:
-    keyname: "{{ instance_name }}"
+    region: ap-southeast-1
+    keyname: shirtly-sg-key
   tasks:
     - name: create keypair
       ec2_key:
-        region: "{{ instance_region }}"
+        region: "{{ region }}"
         name: "{{ keyname }}"
       register: mykey
 
