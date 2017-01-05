@@ -11,6 +11,7 @@
     - libcurl4-openssl-dev
     - libv8-dev
     - libpq-dev
-    # - nodejs
+    - fail2ban
+    - nodejs
     # - nginx
     # - postgresql
