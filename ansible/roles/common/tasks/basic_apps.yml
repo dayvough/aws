@@ -12,6 +12,7 @@
     - nodejs
     - autoconf
     - bison
+    - sqlite3
     - libcurl4-openssl-dev
     - libv8-dev
     - libpq-dev
