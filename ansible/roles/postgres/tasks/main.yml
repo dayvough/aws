@@ -22,3 +22,5 @@
   postgresql_db:
     name: "{{ postgresql_db }}"
     owner: "{{ ansible_user }}"
+  become: yes
+  become_user: postgres
