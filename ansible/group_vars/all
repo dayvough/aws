@@ -9,5 +9,5 @@ ansible_ssh_private_key_file: ~/.ssh/{{ instance_name }}-key.pem
 ansible_user: ubuntu
 ansible_user_home_dir: /home/{{ ansible_user }}
 
-postgresql_db: {{ instance_name }}_production
+postgresql_db: "{{ instance_name }}_production"
 postgresql_password: "darthvader"
