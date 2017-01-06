@@ -7,11 +7,11 @@
     group: "{{ ansible_user_group }}"
 
 - name: Copy database.yml file
-  templates:
+  template:
     src: templates/database.yml
     dest: "{{ ansible_user_home_dir }}/{{ instance_name }}/shared/config/database.yml"
 
 - name: Copy secrets.yml file
-  templates:
+  template:
     src: templates/secrets.yml
     dest: "{{ ansible_user_home_dir }}/{{ instance_name }}/shared/config/secrets.yml"
