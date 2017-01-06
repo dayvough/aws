@@ -10,9 +10,9 @@
   register: check_ruby_build_installation
 
 - name: Download rbenv
-  command: git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+  command: "git clone https://github.com/rbenv/rbenv.git {{ ansible_user_home_dir }}/.rbenv"
   when: check_rbenv_installation.stat.exists == False
 
 - name: Download ruby-build
-  command: git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+  command: "git clone https://github.com/rbenv/ruby-build.git {{ ansible_user_home_dir }}/.rbenv/plugins/ruby-build"
   when: check_ruby_build_installation.stat.exists == False
