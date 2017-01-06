@@ -18,7 +18,7 @@
   when: check_ruby_build_installation.stat.exists == False
 
 - name: Skip ruby docs
-  shell: "gem: --no-ri --nordoc" >> ~/.gemrc
+  shell: "'gem: --no-ri --nordoc' >> ~/.gemrc"
 
 - name: Install bundler
   gem:
