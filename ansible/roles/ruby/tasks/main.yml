@@ -18,7 +18,9 @@
   when: check_ruby_build_installation.stat.exists == False
 
 - name: Skip ruby docs
-  shell: "'gem: --no-ri --nordoc' >> {{ ansible_user_home_dir }}/.gemrc"
+  template:
+    src: templates/gemrc
+    dest: "{{ ansible_user_home_dir }}/.gemrc"
 
 - name: Install bundler
   gem:
