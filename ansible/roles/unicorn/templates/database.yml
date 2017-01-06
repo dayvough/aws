@@ -4,10 +4,6 @@ default: &default
   password: "{{ postgresql_password }}"
   host: localhost
 
-# staging:
-#   <<: *default
-#   database: "{{ instance_name }}-staging"
-
 production:
   <<: *default
   database: "{{ instance_name }}-production"
