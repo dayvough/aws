@@ -30,3 +30,10 @@
     src: templates/pg_hba.conf
     dest: "/etc/postgresql/9.5/main/pg_hba.conf"
   become: yes
+  register: pg_hba_changed
+
+- name: Restart postgresql
+  service:
+    name: postgresql
+    state: restarted
+  when: pg_hba_changed|succeeded
