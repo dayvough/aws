@@ -6,7 +6,18 @@
   with_items:
     - nginx
 
-# - name: Copy nginx conf
-#   template:
-#     src: templates/app.conf
-#     dest: ""
+- name: Check if default nginx conf is present in sites-enabled
+  stat:
+    path: "/etc/nginx/sites-enabled"
+  register: default_sites_enabled
+
+- name: Remove default nginx conf in sites-enabled
+  file:
+    path: "/etc/nginx/sites-enabled/default"
+    state: absent
+  when: default_sites_enabled.stat.exists == True
+
+- name: Copy nginx conf
+  template:
+    src: templates/app.conf
+    dest: "/etc/nginx/sites-enabled/{{ instance_name }}"
