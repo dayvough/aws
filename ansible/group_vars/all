@@ -7,7 +7,9 @@ instance_ami: ami-06963965
 
 ansible_ssh_private_key_file: ~/.ssh/{{ instance_name }}-key.pem
 ansible_user: ubuntu
+ansible_user_group: ubuntu
 ansible_user_home_dir: /home/{{ ansible_user }}
 
 postgresql_db: "{{ instance_name }}-production"
+postgresql_user: "ubuntu"
 postgresql_password: "darthvader"

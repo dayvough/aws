@@ -13,3 +13,4 @@
   roles:
     - { role: ruby, tags: [ruby_install] }
     - { role: nginx, tags: [nginx_install] }
+    - { role: unicorn, tags: [unicorn_install] }

@@ -1,0 +1,17 @@
+---
+- name: Create shared config
+  file:
+    path: "{{ ansible_user_home_dir }}/{{ instance_name }}/shared/config"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user_group }}"
+
+- name: Copy database.yml file
+  templates:
+    src: templates/database.yml
+    dest: "{{ ansible_user_home_dir }}/{{ instance_name }}/shared/config/database.yml"
+
+- name: Copy secrets.yml file
+  templates:
+    src: templates/secrets.yml
+    dest: "{{ ansible_user_home_dir }}/{{ instance_name }}/shared/config/secrets.yml"
