@@ -8,10 +8,17 @@
     - git-core
     - build-essential
     - curl
+    - fail2ban
+    - nodejs
+    - autoconf
+    - bison
     - libcurl4-openssl-dev
     - libv8-dev
     - libpq-dev
-    - fail2ban
-    - nodejs
-    # - nginx
-    # - postgresql
+    - libyaml-dev
+    - libreadline6-dev
+    - zlib1g-dev
+    - libncurses5-dev
+    - libffi-dev
+    - libgdbm3
+    - libgdbm-dev
