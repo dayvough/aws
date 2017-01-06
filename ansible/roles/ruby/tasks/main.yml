@@ -22,6 +22,6 @@
     src: templates/gemrc
     dest: "{{ ansible_user_home_dir }}/.gemrc"
 
-- name: Install bundler
-  become_user: "{{ ansible_user }}"
-  command: bash -lc "gem install bundler"
+# - name: Install bundler
+#   become_user: "{{ ansible_user }}"
+#   command: bash -lc "gem install bundler"

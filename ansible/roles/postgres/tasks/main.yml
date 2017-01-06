@@ -24,3 +24,9 @@
     owner: "{{ ansible_user }}"
   become: yes
   become_user: postgres
+
+- name: Edit pg_hba.conf
+  template:
+    src: templates/pg_hba.conf
+    dest: "/etc/postgresql/9.5/main/pg_hba.conf"
+  become: yes
