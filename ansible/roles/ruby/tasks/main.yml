@@ -23,5 +23,5 @@
     dest: "{{ ansible_user_home_dir }}/.gemrc"
 
 - name: Install bundler
-  sudo_user: {{ ansible_user }}
+  sudo_user: "{{ ansible_user }}"
   command: bash -lc "gem install bundler"
