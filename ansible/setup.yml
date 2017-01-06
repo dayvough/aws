@@ -12,3 +12,4 @@
   become: true
   roles:
     - { role: ruby, tags: [ruby_install] }
+    - { role: nginx, tags: [nginx_install] }
