@@ -23,4 +23,3 @@
     - libffi-dev
     - libgdbm3
     - libgdbm-dev
-    - python-psycopg2
