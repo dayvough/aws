@@ -1,6 +1,6 @@
 ---
 
-instance_name: v4-internal-alpha
+instance_name: v4-kyogre
 instance_region: ap-southeast-1
 instance_type: t2.nano
 instance_ami: ami-06963965
