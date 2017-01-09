@@ -3,13 +3,13 @@
   connection: local
   gather_facts: no
   vars:
-    sgname: "{{ instance_name }}-sg"
+    sgname: "{{ security_group_name }}-sg"
   tasks:
     - name: create security group
       ec2_group:
         region: "{{ instance_region }}"
         name: "{{ sgname }}" 
-        description: "security group for {{ instance_name }}"
+        description: "security group for {{ security_group_name }}"
         rules:
           - proto: tcp
             from_port: 22
