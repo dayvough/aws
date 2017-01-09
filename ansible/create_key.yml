@@ -3,7 +3,7 @@
   connection: local
   gather_facts: no
   vars:
-    keyname: "{{ instance_name }}-key"
+    keyname: "{{ group_name }}-key"
   tasks:
     - name: create key pair
       ec2_key:

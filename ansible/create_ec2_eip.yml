@@ -9,7 +9,7 @@
         instance_type: "{{ instance_type }}"
         image: "{{ instance_ami }}"
         wait: yes
-        key_name: "{{ instance_name }}-key"
+        key_name: "{{ group_name }}-key"
         group: "{{ security_group_name }}-sg"
       register: ec2
 
