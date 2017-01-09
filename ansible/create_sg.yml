@@ -2,13 +2,11 @@
 - hosts: localhost
   connection: local
   gather_facts: no
-  vars:
-    sgname: "{{ security_group_name }}-sg"
   tasks:
     - name: create security group
       ec2_group:
         region: "{{ instance_region }}"
-        name: "{{ sgname }}" 
+        name: "{{ security_group_name }}-sg" 
         description: "security group for {{ security_group_name }}"
         rules:
           - proto: tcp

@@ -10,7 +10,7 @@
         image: "{{ instance_ami }}"
         wait: yes
         key_name: "{{ instance_name }}-key"
-        group: "{{ instance_name }}-sg"
+        group: "{{ security_group_name }}-sg"
       register: ec2
 
     - name: associate new EIP with new instance
