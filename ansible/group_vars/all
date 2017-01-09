@@ -10,7 +10,7 @@ group_name: v4-alpha
 security_group_name: "{{ group_name }}"
 security_group_region: "{{ instance_region }}"
 
-ansible_ssh_private_key_file: ~/.ssh/{{ instance_name }}-key.pem
+ansible_ssh_private_key_file: ~/.ssh/{{ group_name }}-key.pem
 ansible_user: ubuntu
 ansible_user_group: ubuntu
 ansible_user_home_dir: /home/{{ ansible_user }}
