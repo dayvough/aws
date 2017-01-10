@@ -22,6 +22,20 @@
     src: templates/gemrc
     dest: "{{ ansible_user_home_dir }}/.gemrc"
 
+- name: append rbenv config to bash_profile
+  become: yes
+  template:
+    src: templates/bash_profile
+    dest: "~/.bash_profile"
+
+- name: set rbenv permissions
+  file:
+    path: "{{ ansible_user_home_dir }}/.rbenv"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    recurse: yes
+
 # - name: Install bundler
 #   become_user: "{{ ansible_user }}"
 #   command: bash -lc "gem install bundler"
