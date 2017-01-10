@@ -8,7 +8,7 @@
 
 - name: Check if default nginx conf is present in sites-enabled
   stat:
-    path: "/etc/nginx/sites-enabled"
+    path: "/etc/nginx/sites-enabled/default"
   register: default_sites_enabled
 
 - name: Remove default nginx conf in sites-enabled
