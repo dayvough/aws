@@ -1,7 +1,7 @@
 ---
 
 instance_name: shirtly-tracker
-instance_tag: name=misc
+instance_tags: name=misc
 instance_region: ap-southeast-1
 instance_type: t2.nano
 instance_ami: ami-06963965
