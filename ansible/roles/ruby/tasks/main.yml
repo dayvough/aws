@@ -36,14 +36,10 @@
     group: "{{ ansible_user }}"
     recurse: yes
 
-- name: install ruby 2.3.0
-  command: "rbenv install 2.3.0"
-  register: ruby_installed
+# - name: install ruby 2.3.0
+#   command: "rbenv install 2.3.0"
+#   register: ruby_installed
 
-- name: set rbenv global to 2.3.0 && install bundler
-  command: "rbenv global 2.3.0 && gem install bundler"
-  when: ruby_installed|succeeded
-
-# - name: Install bundler
-#   become_user: "{{ ansible_user }}"
-#   command: bash -lc "gem install bundler"
+# - name: set rbenv global to 2.3.0 && install bundler
+#   command: "rbenv global 2.3.0 && gem install bundler"
+#   when: ruby_installed|succeeded
