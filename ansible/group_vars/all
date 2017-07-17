@@ -1,12 +1,12 @@
 ---
 
-instance_name: cvgi-f2p
-instance_tags: name=misc
-instance_region: ap-northeast-1
+instance_name: shopify-webhook
+instance_tags: name=web
+instance_region: ap-southeast-1
 instance_type: t2.micro
-instance_ami: ami-785c491f
+instance_ami: ami-bf7ef3dc
 
-group_name: cvgi
+group_name: xpanse
 
 security_group_name: "{{ group_name }}"
 security_group_region: "{{ instance_region }}"
