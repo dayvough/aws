@@ -4,7 +4,7 @@ instance_name: shopify-webhook
 instance_tags: name=web
 instance_region: ap-southeast-1
 instance_type: t2.micro
-instance_ami: ami-bf7ef3dc
+instance_ami: ami-77af2014
 
 group_name: xpanse
 
