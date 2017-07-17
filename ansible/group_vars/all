@@ -4,7 +4,7 @@ instance_name: shopify-webhook
 instance_tags: name=web
 instance_region: ap-southeast-1
 instance_type: t2.micro
-instance_ami: ami-77af2014
+instance_ami: ami-2378f540
 
 group_name: xpanse
 
@@ -12,10 +12,10 @@ security_group_name: "{{ group_name }}"
 security_group_region: "{{ instance_region }}"
 
 ansible_ssh_private_key_file: ~/.ssh/{{ group_name }}-key.pem
-ansible_user: ec2-user
-ansible_user_group: ec2-user
+ansible_user: ubuntu
+ansible_user_group: ubuntu
 ansible_user_home_dir: /home/{{ ansible_user }}
 
 postgresql_db: "{{ instance_name }}-production"
-postgresql_user: "ec2-user"
+postgresql_user: "ubuntu"
 postgresql_password: "darthvader"
