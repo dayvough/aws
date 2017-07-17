@@ -1,5 +1,5 @@
 ---
-- hosts: tag_name_misc
+- hosts: tag_name_web
   become: true
   roles:
     - { role: common, task: add_ssh_key, tags: [ubuntu_add_ssh_key] }
@@ -8,7 +8,7 @@
     - { role: postgres, tags: [postgres_install] }
     - { role: imagemagick, tags: [imagemagick_install] }
 
-- hosts: tag_name_misc
+- hosts: tag_name_web
   become: true
   roles:
     - { role: ruby, tags: [ruby_install] }
